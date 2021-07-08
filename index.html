@@ -4,9 +4,9 @@
     <head>
         <meta charset="utf-8">
 
-        <title>Data Structures Meets Logging</title>
+        <title>How I Made My Presentation</title>
 
-        <meta name="description" content="Data Structures Meets Logging">
+        <meta name="description" content="How I Made My Presentation">
         <meta name="author" content="Jeremy Schendel">
 
         <meta name="apple-mobile-web-app-capable" content="yes">
@@ -30,346 +30,169 @@
             <div class="slides">
                 <section>
 
-                    <h1>Data Structures</h1>
-                    <h2>Meets</h2>
-                    <h1>Logging</h1>
+                    <h1>How I Made My Presentation</h1>
                 </section>
 
 
                 <section data-transition="slide">
-                    <h2>Data Structures 101</h2>
-                	<h4>Day 1</h4>
+                	<h2>A.K.A. Why you should use reveal.js</h2>
                 </section>
 
-                <section data-background="images/data_structures.png" data-background-transition="zoom" data-background-size="contain">
-                </section>
-
-                <section data-transition="convex">
-                	<h2>Stacks</h2>
-                	<ul>
-                      <li>One of the first data structures you learn about</li>
-                      <li>Two general operations: <code>push</code> and <code>pop</code></li>
-                      <li>LIFO: Last In, First Out</li>
-                    </ul> 
-                </section>
-
-                <section data-transition="zoom">
-                	<h2>Analogy</h2>
-                    <img src="images/plates.jpg" width="40%">
-                </section>
-
-                <section data-transition="zoom">
-                    <img src="images/stack.gif" width="60%">
+                <section data-background="images/revealjs.png" data-background-transition="zoom" data-background-size="contain">
                 </section>
 
                 <section data-transition="convex">
-                    <h2>Comparison: FIFO Queue</h2>
-                     <ul>
-                      <li>FIFO: First In, First Out</li>
-                      <li>Example: Waiting in a line</li>
+                	<h3>Easy Setup</h3>
+                	<ol>
+                      <li>Clone the reveal.js repository</li>
+                      <li>Open <code>index.html</code> in a web browser to view your presentation
+                    </ol> 
+                </section>
+
+                <section data-transition="convex">
+                    <h3>Full Setup</h3>
+                    <ol>
+                      <li>Install Node.js version 10.0 or greater</li>
+                      <li>Clone the reveal.js repository</li>
+                      <li>Move to the directory and install via <code>npm install</code></li>
+                      <li>Serve the presentation via <code>npm run</code></li>
+                      <li>Open <a>http://localhost:8000</a> to view your presentation</li>
+                    </ol> 
+                </section>
+
+                <section data-transition="slide">
+                    <h2>How do you edit the presentation?</h2>
+                </section>
+
+                <section data-transition="zoom">
+                    <img src="images/html.png">
+                </section>
+
+                <section data-transition="convex">
+                    <h3>The Basics</h3>
+                    <ul>
+                      <li>Entire presentation can be in <code>index.html</code></li>
+                      <li>The starting <code>index.html</code> has reveal.js baked in</li>
+                      <li>Each slide is contained in a <code>&lt;section&gt;</code> tag</li>
+                      <li>Write your HTML and it will render!</li>
+                      <li>Many examples of reveal.js specific functionality online</li>
                     </ul>
+                </section>
+
+                <section data-transition="convex">
+                    <h3>Markdown is supported too!</h3>
+                    <small>*limited knowledge on my part here though</small>
+                </section>
+
+                <section data-transition="slide">
+                    <h2>What features do you get?</h2>
+                </section>
+
+                <section data-transition="convex">
+<h2>Code Highlighting</h2>
+<pre><code class="html" data-line-numbers=|1-4|6-10><section data-transition="convex">
+  <h3>Markdown is supported too!</h3>
+  <small>*limited knowledge on my part here though</small>
+</section>
+
+<section data-transition="slide">
+  <h2>What features do you get?</h2>
+</section>
+</code></pre>
+</section>
+
+                <section data-transition="convex">
+                  <h2>LaTeX Style Math</h2>
+                  \[\begin{equation}
+                  P(x_{i}\mid y) = \frac{1}{\sqrt{2\pi \sigma_y^{2}}} \exp \left(-\frac{(x_{i} -\mu_{y})^2}{2\sigma_y^{2}} \right)
+                  \end{equation} \]
+
+                <p class="fragment"><small>*The equation is Gaussian Naïve Bayes, for those who are curious</small></p>
+                <p class="fragment"><small>**Oh, and fade in/out slide fragments are supported too!</small></p>
+                </section>
+
+                <section data-transition="convex">
+                  <section>
+                    <h2>Vertical Slides</h2>
                     <br />
-                    <img src="images/queue.png" width="80%">
-                </section>
-
-                <section data-transition="slide">
-                    <h2>A Logging Problem</h2>
-                </section>
-
-                <section data-background="images/logging.jpg" data-background-transition="zoom" data-background-size="contain">
+                    Not just left and right
+                  </section>
+                  <section>But up and down too!</section>
                 </section>
 
                 <section data-transition="convex">
-                    <h2>Requirements</h2>
-                     <ul>
-                      <li>Automatically log metrics associated with tasks</li>
-                      <li>Allow users to extend metrics on per task basis</li>
-                      <li>Compatibility with Azure Log Analytics</li>
-                      <li>Lightweight for end users</li>
-                    </ul> 
+                  <h2>Overview Mode</h2>
+                  <br />
+                  Hit O or ESC for a visual overview of your slides
                 </section>
 
                 <section data-transition="convex">
-                    <h2>First Idea: Use a Decorator!</h2>
-                     <ul>
-                      <li>Specify standard metrics in decorator code</li>
-                      <li>Handle Azure compatibility in decorator code</li>
-                      <li>Easy for end users to apply to their code</li>
-                    </ul> 
+                  <h2>Speaker View</h2>
+
+                  <br />
+                  Hit S to Enter Speaker View with private notes
+
+                  <img src="images/speaker.png" width="50%">
+
+
+                  <aside class="notes">
+                    Shhh, these are your private notes 📝
+                  </aside>
                 </section>
 
-<section data-transition="convex">
-<h2>Code Example</h2>
-<pre><code class="python" data-line-numbers># run the task and record time
-start_time = datetime.now()
-try:
-    wrapped_func(*args, **kwargs)
-    error = None
-except Exception as e:
-    error = e
-end_time = datetime.now()
+                <section data-transition="convex" data-background-image="images/nht.png">
+                <!-- <font color="black"> -->
+                  <h2 style="color:black">Custom Backgrounds</h2>
+                  <br />
+                  <br />
+                  <p style="color:#2E6D94;text-align:left">You can still have your<br />NHT theme!</p>
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                </section>
 
-# create a metrics dictionary and log it
-metrics_dict = {}
-metrics_dict["duration"] = (end_time - start_time).total_seconds()
-metrics_dict["job_name"] = job_name
-if error is not None:
-    metrics_dict["failed"] = True
+                <section data-transition="Slide">
+                	<h2>And the most important feature...</h2>
+                </section>
 
-logging.info(f"log_metrics: {json.dumps(metrics_dict)}")
-</code></pre>
-</section>
+                <section data-transition="slide">
+                    <h2>GIFS!!!</h2>
+                </section>
 
-				<section data-transition="zoom">
-                    <img src="images/problem.gif">
+                <section data-transition="zoom">
+                    <img src="images/wow.gif" width="80%">
+                </section>
+
+                <section data-transition="zoom">
+                    <img src="images/dog.gif" width="66%">
+                </section>
+
+                <section data-transition="slide">
+                    <h2>Videos are supported too!</h2>
+                    <video src="videos/shocked.mp4"></video>
+                </section>
+
+                <section data-transition="slide">
+                    <h2>How do you share presentations?</h2>
                 </section>
 
                 <section data-transition="convex">
-                    <h2>What about custom metrics?</h2>
-                     <ul>
-                      <li>Wanted to extensibility of standard metrics</li>
-                      <li>Users have no access to <code>metrics_dict</code></li>
-                      <li>Idea: Attach <code>metrics_dict</code> to decorated object</li>
-                    </ul>  
-                </section>
-
-<section data-transition="convex">
-Code Example
-<pre><code class="python" data-line-numbers=1-2|13-19># add a metrics dictionary to the task
-self._metrics_dict = {}
-
-# run the task and record time
-start_time = datetime.now()
-try:
-    wrapped_func(*args, **kwargs)
-    error = None
-except Exception as e:
-    error = e
-end_time = datetime.now()
-
-# Add standard metrics and log the result
-self._metrics_dict["duration"] = (end_time - start_time).total_seconds()
-self._metrics_dict["job_name"] = job_name
-if error is not None:
-    self._metrics_dict["failed"] = True
-
-logging.info(f"log_metrics: {json.dumps(self._metrics_dict)}")
-</code></pre>
-</section>
-
-<section>
-Code Example
-<pre><code class="python" data-line-numbers>def add_to_metrics_dict(self, new_metrics_dict):
-    """
-    Add custom metrics to the current logging metrics dictionary.
-
-    Parameters
-    ----------
-    self : object
-        Instance of the object - should be `self` in most cases.
-    new_metrics_dict : dict
-        Dictionary of metrics add to the current logging metrics dictionary
-    """
-    self.metrics_dict.update(new_metrics_dict)
-</code></pre>
-</section>
-
-				<section data-transition="zoom">
-                    <img src="images/problem2.gif">
-                </section>
-
-                <section data-transition="slide">
-                    <h2>Nesting</h2>
-                     <ul>
-                      <li>Nested calls to methods on the same object</li>
-                      <li>Dictionary from original method gets overwritten</li>
-                    </ul> 
-                    <img src="images/nesting.gif">
-                </section>
-
-<section data-transition="convex">
-Code Example
-<pre><code class="python" data-line-numbers>class SomeTask:
-    def run(self):
-        self.foo()
-    
-    @log_task_metrics
-    def foo(self):
-        add_to_metrics_dict(self, {"custom_foo": "foo"})
-        self.bar()
-    
-    @log_task_metrics
-    def bar(self):
-        add_to_metrics_dict(self, {"custom_bar": "bar"})
-</code></pre>
-</section>
-
-                <section data-transition="zoom">
-                    <img src="images/solution.gif" width="150%">
-                </section>
-
-                <section data-transition="zoom">
-                    <h1>Stacks!</h1>
-                </section>
-
-                <section data-transition="slide">
-                    <h2>Idea: Use a stack of dictionaries</h2>
-                     <ul>
-                      <li>Push a dict to the stack when entering the decorator</li>
-                      <li>Pop a dict from the stack when exiting the decorator</li>
-                    </ul> 
-                </section>
-
-<section data-transition="convex">
-Code Example
-<pre><code class="python" data-line-numbers=1-4|15-16># add a new metrics dictonary stack so we don't run into issues with nested logs, creating the stack if needed
-if not hasattr(self, "_logging_metrics"):
-    self._logging_metrics = LifoQueue()
-self._logging_metrics.put({})
-
-# run the task and record time
-start_time = datetime.now()
-try:
-    wrapped_func(*args, **kwargs)
-    error = None
-except Exception as e:
-    error = e
-end_time = datetime.now()
-
-# get the metrics dictionary from the stack and add metrics to it
-metrics_dict = self._logging_metrics.get()
-metrics_dict["duration"] = (end_time - start_time).total_seconds()
-metrics_dict["job_name"] = job_name
-if error is not None:
-    metrics_dict["failed"] = True
-
-logging.info(f"log_metrics: {json.dumps(metrics_dict)}")
-</code></pre>
-</section>
-
-<section>
-Code Example
-<pre><code class="python" data-line-numbers=12-14>def add_to_metrics_dict(self, new_metrics_dict):
-    """
-    Add custom metrics to the current logging metrics dictionary.
-
-    Parameters
-    ----------
-    self : object
-        Instance of the object - should be `self` in most cases.
-    new_metrics_dict : dict
-        Dictionary of metrics add to the current logging metrics dictionary
-    """
-    current_metrics_dict = self._logging_metrics.get()
-    current_metrics_dict.update(new_metrics_dict)
-    self._logging_metrics.put(current_metrics_dict)
-</code></pre>
-</section>
-
-<section data-transition="convex">
-Return to the nesting problem
-<pre><code class="python" data-line-numbers>class SomeTask:
-    def run(self):
-        self.foo()
-    
-    @log_task_metrics
-    def foo(self):
-        add_to_metrics_dict(self, {"custom_foo": "foo"})
-        self.bar()
-    
-    @log_task_metrics
-    def bar(self):
-        add_to_metrics_dict(self, {"custom_bar": "bar"})
-</code></pre>
-</section>
-
-
-                <section data-transition="slide">
-                    <h1>Problem Solved!</h1>
-                </section>
-
-                <section data-transition="zoom">
-                    <img src="images/applause1.gif" width="150%">
-                </section>
-
-                <section data-transition="zoom">
-                    <img src="images/applause2.gif" width="150%">
-                </section>
-
-                <section data-transition="zoom">
-                    <img src="images/applause3.gif" width="80%">
-                </section>
-
-                <section data-transition="zoom">
-                    <img src="images/wait.gif" width="150%">
-                </section>
-
-                <section data-transition="zoom">
-                    <img src="images/uhoh.gif">
-                </section>
-
-                <section data-transition="slide">
-                    <h1>What about concurrency?</h1>
-                </section>
-
-                <section data-transition="zoom">
-                    <img src="images/godsake.gif" width="150%">
+                  <h3>Export to PDF is supported</h3>
+                  <small>(but no gifs)</small>
                 </section>
 
                 <section data-transition="convex">
-                    <h2>Concurrency</h2>
-                     <ul>
-                      <li>Want to run multiple logged tasks at the same time</li>
-                      <li>Order of the metrics dicts can get swapped</li>
-                      <li>Everything gets messed up</li>
-                    </ul> 
-                </section>
-
-<section data-transition="convex">
-Code Example
-<pre><code class="python" data-line-numbers>from concurrent.futures import ThreadPoolExecutor
-
-class SomeTask:
-    def run(self):
-        with ThreadPoolExecutor() as executor:
-            future_foo = executor.submit(self.foo)
-            future_bar = executor.submit(self.bar)
-
-            future_foo.result()
-            future_bar.result()
-
-    @log_task_metrics
-    def foo(self):
-        add_to_metrics_dict(self, {"custom_foo": "foo"})
-        sleep(2)
-
-    @log_task_metrics
-    def bar(self):
-        add_to_metrics_dict(self, {"custom_bar": "bar"})
-        sleep(3)
-</code></pre>
-</section>
-
-                <section data-transition="slide">
-                    <h1>What's the fix?</p>
-                </section>
-
-                <section data-transition="slide">
-                    <h1>Don't support concurrency!</p>
-                </section>
-
-                <section data-transition="zoom">
-                    <img src="images/not_my_prob.gif" width="120%">
-                </section>
-
-                <section data-transition="convex">
-                    <video data-autoplay data-src="videos/future_homer.mp4"></video>
+                  <h3>Host on GitHub Pages</h3>
+                  <ul>
+                      <li>Create a new empty repository</li>
+                      <li>Commit the presentation to the <code>gh-pages</code> branch</li>
+                      <li>The presentation should now be available at <a>yourname.github.io/repo-name</a></li>
+                  </ul>
                 </section>
 
                 <section data-background="images/the_end.gif" data-background-transition="zoom">
-                </section>
-
-                <section data-background="images/credits.gif">
                 </section>
 
             </div>
@@ -382,6 +205,7 @@ class SomeTask:
         <script src="plugin/search/search.js"></script>
         <script src="plugin/markdown/markdown.js"></script>
         <script src="plugin/highlight/highlight.js"></script>
+        <script src="plugin/math/math.js"></script>
         <script>
 
             // Also available as an ES module, see:
@@ -392,12 +216,16 @@ class SomeTask:
                 center: true,
                 hash: true,
                 autoPlayMedia: true,
+                math: {
+                  mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+                  config: 'TeX-AMS_HTML-full',
+                  // pass other options into `MathJax.Hub.Config()`
+                  TeX: { Macros: { RR: "{\\bf R}" } }
+                },
 
                 // Learn about plugins: https://revealjs.com/plugins/
-                plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
+                plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight, RevealMath ]
             });
-
         </script>
-
     </body>
 </html>
